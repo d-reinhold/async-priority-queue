@@ -1,0 +1,8 @@
+{
+  "spec_dir": "dist",
+  "spec_files": [
+    "async_priority_queue_spec.js"
+  ],
+  "stopSpecOnExpectationFailure": false,
+  "random": false
+}

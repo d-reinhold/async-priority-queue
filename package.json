@@ -1,0 +1,35 @@
+{
+  "name": "async-priority-queue",
+  "version": "0.1.0",
+  "description": "A package to simplify queueing and control of asynchronous tasks",
+  "author": "Dominick Reinhold",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/d-reinhold/async-priority-queue"
+  },
+  "main": "dist/async_priority_queue.js",
+  "scripts": {
+    "test": "npm run build && ./node_modules/.bin/babel spec/async_priority_queue_spec.js --out-file dist/async_priority_queue_spec.js && jasmine",
+    "build": "./node_modules/.bin/babel src/async_priority_queue.js --out-file dist/async_priority_queue.js",
+    "clean": "rm dist/async_priority_queue.js dist/async_priority_queue-spec.js"
+  },
+  "keywords": [
+    "ajax",
+    "async",
+    "priority",
+    "promise",
+    "promises",
+    "queue"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "promise-defer": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.5.1",
+    "babel-plugin-transform-object-assign": "^6.5.0",
+    "babel-preset-es2015": "^6.5.0",
+    "jasmine": "^2.4.1",
+    "mock-promises": "^0.6.0"
+  }
+}
