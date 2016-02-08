@@ -71,13 +71,13 @@ A configuration object can be provided with the following keys::
 
 `debug` enables logging statements to help provide visibility into the state of your queue. Defaults to `false`.
 
-`maxParallel` is the number of requests that are allowed to be active at a time. Defaults to 6.
+`maxParallel` is the number of requests that are allowed to be active at a time. Defaults to `6`.
 
 `processingFrequency` is the period in milliseconds between when the queues are checked for new tasks. Defaults to `30`.
 
 #### start()
 
-Starts the processing loop for the queue; tasks can be added, and executed.
+Starts the processing loop for the queue; tasks can be added and executed.
 
 #### stop()
 
@@ -85,7 +85,7 @@ Stops the processing loop for the queue; tasks can be added but will not be exec
 
 #### clear(priority)
 
-Clears the queue for a particular priority ('low', 'mid', or 'high'). Useful for when your UI is changing to an unrelated route and you want to cancel all low priority tasks you have queued up (i.e. `GET` requests for the old UI that are no longer relevant).
+Clears the queue for a particular priority ('low', 'mid', or 'high'). Useful for when your UI is changing to an unrelated view and you want to cancel all low priority tasks you have queued up (i.e. `GET` requests for the old UI that are no longer relevant).
 
 #### enqueue(task)
 
@@ -93,7 +93,7 @@ Takes an `AsyncTask` and adds it to the correct queue.
 
 #### processQueue()
 
-This function gets called once every `processingFrequency`ms. It inspects the state of the queues and the active tasks and executes a new task if necessary. It can be called manually if desired.
+This function gets called once every `processingFrequency` milliseconds. It inspects the state of the queues and the active tasks and executes a new task if necessary. It can be called manually if desired.
 
 ###AsyncTask
 
@@ -104,5 +104,6 @@ A configuration object can be provided with the following keys::
 
 `callback` is the function to be called when the task is executed. `callback` must be specified and must return a promise.
 
-
+#### promise
+An instance of an `AsyncTask` has a property called `promise`. This is a promise that is resolved (or rejected) when the callback is finished executing.
 
