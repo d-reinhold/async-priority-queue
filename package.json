@@ -1,6 +1,6 @@
 {
   "name": "async-priority-queue",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A package to simplify queueing and control of asynchronous tasks",
   "author": "Dominick Reinhold",
   "repository": {

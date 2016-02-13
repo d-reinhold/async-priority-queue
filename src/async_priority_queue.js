@@ -33,7 +33,7 @@ const AsyncPriorityQueue = (config = {}) => {
 };
 
 const AsyncTask = (config = {}) => {
-  const {priority, callback} = Object.assign({priority: 'low'}, config);
+  const {priority, callback} = Object.assign({priority: 'mid'}, config);
   const deferred = defer();
   return {
     priority,
